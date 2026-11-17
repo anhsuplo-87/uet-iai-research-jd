@@ -1,0 +1,135 @@
+[
+  {
+    "objectID": "en/index.html",
+    "href": "en/index.html",
+    "title": "Call for Research Students: AI for Lung Cancer Diagnosis on CT",
+    "section": "",
+    "text": "GroupUET-IAI\nPIDr. Trần Quốc Long\nSupervisorM.Sc. Lương Sơn Bá · bals@vnu.edu.vn\nStatusOpen · 3–5 positions\nDeadlineRolling — applications are reviewed until all positions are filled\n\n Apply Download PDF\n Last updated: 17 November 2026"
+  },
+  {
+    "objectID": "en/index.html#about-the-project",
+    "href": "en/index.html#about-the-project",
+    "title": "Call for Research Students: AI for Lung Cancer Diagnosis on CT",
+    "section": "About the project",
+    "text": "About the project\nLung cancer is one of the leading causes of cancer death. Detecting lung nodules early on chest CT substantially improves the chances of successful treatment. Our group builds AI systems that support clinicians: systems that pinpoint lesions, classify cancer, and explain their own results."
+  },
+  {
+    "objectID": "en/index.html#research-tracks",
+    "href": "en/index.html#research-tracks",
+    "title": "Call for Research Students: AI for Lung Cancer Diagnosis on CT",
+    "section": "Research tracks",
+    "text": "Research tracks\n\n\n\nTrack 1\n\n\nVision-Language Model (VLM) for lung cancer\n\nGoal: a model that both sees a CT scan and answers in natural language, while localizing (grounding) the lesion it is talking about.\nWhat you will do: build a pipeline that generates instruction/conversation data paired with segmentation masks; fine-tune a grounded VLM (GLaMM); evaluate the model.\nOutcomes: a dataset, a model, a technical report, and ultimately a paper.\n\n\n\n\n\nTrack 2\n\n\nDiagnostic support system (Segmentation & Classification)\n\nGoal: a complete pipeline from DICOM images through lung/nodule segmentation to malignancy classification (benign vs. malignant) and cancer classification. The system is deployed and used in practice at our partner hospital.\nWhat you will do:\n\nPreprocess CT images.\nTrain and evaluate segmentation models (U-Net, nnU-Net, MedSAM…) and classification models.\nHandle deployment and maintain the system running on-site at the partner hospital.\n\nOutcomes: an end-to-end system running at the hospital, benchmark results, and a technical report."
+  },
+  {
+    "objectID": "en/index.html#what-you-will-do",
+    "href": "en/index.html#what-you-will-do",
+    "title": "Call for Research Students: AI for Lung Cancer Diagnosis on CT",
+    "section": "What you will do",
+    "text": "What you will do\n\nRead and present papers and experimental results at weekly group meetings.\nWork with public datasets (LIDC-IDRI, LUNA) and labeled clinical data from our partner hospital.\nWrite code, run experiments on the GPU server, and document the results.\nWrite reports and contribute to writing papers."
+  },
+  {
+    "objectID": "en/index.html#requirements",
+    "href": "en/index.html#requirements",
+    "title": "Call for Research Students: AI for Lung Cancer Diagnosis on CT",
+    "section": "Requirements",
+    "text": "Requirements\n\nRequired\n\nUET student, preferably in year 2–3.\nBasic Python.\nAble to read technical material in English.\nAble to make the time commitment described below.\n\n\n\nPreferred (not required — we will train you)\n\nKnowledge: Machine Learning, Computer Vision, Deep Learning, LLM.\nSkills: PyTorch, Linux, Git, Docker, working with remote servers.\n\nNo prior research experience is required. The first month follows an onboarding plan: a reading list and tutorials."
+  },
+  {
+    "objectID": "en/index.html#commitment",
+    "href": "en/index.html#commitment",
+    "title": "Call for Research Students: AI for Lung Cancer Diagnosis on CT",
+    "section": "Commitment",
+    "text": "Commitment\n\n8–10 hours per week.\nAt least 6 months; we prefer students who want to continue into a student research project (NCKH) or a graduation thesis.\nGroup meetings at least once a week, preferably in person, scheduled in advance.\nComply with patient data privacy rules (you may be asked to sign a confidentiality agreement)."
+  },
+  {
+    "objectID": "en/index.html#what-you-get",
+    "href": "en/index.html#what-you-get",
+    "title": "Call for Research Students: AI for Lung Cancer Diagnosis on CT",
+    "section": "What you get",
+    "text": "What you get\n\nDirect guidance from the supervisor, including code reviews and feedback on your writing.\nAccess to the group’s GPU server.\nA topic for a student research project or graduation thesis; co-authorship for sufficient contributions.\nRecommendation letters for graduate school or job applications.\nNo financial support is available at this time."
+  },
+  {
+    "objectID": "en/index.html#how-to-apply",
+    "href": "en/index.html#how-to-apply",
+    "title": "Call for Research Students: AI for Lung Cancer Diagnosis on CT",
+    "section": "How to apply",
+    "text": "How to apply\n\nEmail bals@vnu.edu.vn with the subject: [KCUTP] Full name - Student ID - Track 1/2\nAttach: your CV (1 page), transcript, a GitHub link if you have one, and 3–5 sentences on why you are interested.\nSelection rounds:\n\nApplication screening.\nMini task (about 1 week, e.g., load a CT case and display the nodule mask).\nA 20–30 minute interview.\n\n\n Apply"
+  },
+  {
+    "objectID": "en/index.html#faq",
+    "href": "en/index.html#faq",
+    "title": "Call for Research Students: AI for Lung Cancer Diagnosis on CT",
+    "section": "FAQ",
+    "text": "FAQ\nI haven’t studied Deep Learning yet. Can I still apply?\nYes. Clearly describe what you have learned on your own.\nCan I choose both tracks?\nYou may list both, but once you join you will focus mainly on one."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "UET-IAI · Research",
+    "section": "",
+    "text": "Đang chuyển tới bản tiếng Việt · English version"
+  },
+  {
+    "objectID": "vi/index.html",
+    "href": "vi/index.html",
+    "title": "Tuyển sinh viên nghiên cứu: AI cho chẩn đoán Ung thư phổi trên ảnh CT",
+    "section": "",
+    "text": "NhómUET-IAI\nPITS. Trần Quốc Long\nSupervisorThS. Lương Sơn Bá · bals@vnu.edu.vn\nTrạng tháiĐang mở · 3–5 vị trí\nHạn nộpXét hồ sơ liên tục đến khi đủ\n\n Ứng tuyển Tải PDF\n Cập nhật lần cuối: 17/11/2026"
+  },
+  {
+    "objectID": "vi/index.html#giới-thiệu",
+    "href": "vi/index.html#giới-thiệu",
+    "title": "Tuyển sinh viên nghiên cứu: AI cho chẩn đoán Ung thư phổi trên ảnh CT",
+    "section": "Giới thiệu",
+    "text": "Giới thiệu\nUng thư phổi là một trong những bệnh ung thư gây tử vong hàng đầu. Phát hiện sớm nốt phổi trên ảnh CT lồng ngực giúp tăng đáng kể cơ hội điều trị. Nhóm phát triển các hệ thống AI hỗ trợ bác sĩ: hệ thống tìm đúng vị trí tổn thương, phân loại ung thư, và giải thích được kết quả của mình."
+  },
+  {
+    "objectID": "vi/index.html#các-hướng-dự-án",
+    "href": "vi/index.html#các-hướng-dự-án",
+    "title": "Tuyển sinh viên nghiên cứu: AI cho chẩn đoán Ung thư phổi trên ảnh CT",
+    "section": "Các hướng dự án",
+    "text": "Các hướng dự án\n\n\n\nHướng 1\n\n\nVision-Language Model (VLM) cho ung thư phổi\n\nMục tiêu: một model vừa nhìn được ảnh CT vừa trả lời bằng ngôn ngữ, đồng thời khoanh vùng (grounding) tổn thương nó đang nói tới.\nViệc sinh viên làm: xây pipeline tạo dữ liệu instruction/conversation kèm segmentation mask; fine-tune grounded VLM (GLaMM); đánh giá model.\nKết quả: dataset, model, báo cáo kỹ thuật và hướng tới paper.\n\n\n\n\n\nHướng 2\n\n\nHệ thống hỗ trợ chẩn đoán (Segmentation & Classification)\n\nMục tiêu: một pipeline đầy đủ từ ảnh DICOM qua lung/nodule segmentation đến malignancy classification (lành tính/ác tính) và cancer classification (phân loại ung thư). Hệ thống được triển khai và vận hành thực tế tại Bệnh viện đối tác.\nViệc sinh viên làm:\n\nTiền xử lý ảnh CT.\nHuấn luyện và đánh giá các model segmentation (U-Net, nnU-Net, MedSAM…) và classification.\nDeployment và maintain hệ thống chạy trực tiếp tại Bệnh viện đối tác.\n\nKết quả: hệ thống chạy được end-to-end tại bệnh viện, kết quả benchmark, báo cáo kỹ thuật."
+  },
+  {
+    "objectID": "vi/index.html#bạn-sẽ-làm-gì",
+    "href": "vi/index.html#bạn-sẽ-làm-gì",
+    "title": "Tuyển sinh viên nghiên cứu: AI cho chẩn đoán Ung thư phổi trên ảnh CT",
+    "section": "Bạn sẽ làm gì",
+    "text": "Bạn sẽ làm gì\n\nĐọc và trình bày paper, kết quả thí nghiệm trong buổi họp nhóm hằng tuần.\nLàm việc với dataset công khai (LIDC-IDRI, LUNA) và dữ liệu lâm sàng có nhãn từ Bệnh viện đối tác.\nViết code, chạy thí nghiệm trên GPU server, ghi lại kết quả.\nViết báo cáo và tham gia viết paper."
+  },
+  {
+    "objectID": "vi/index.html#yêu-cầu",
+    "href": "vi/index.html#yêu-cầu",
+    "title": "Tuyển sinh viên nghiên cứu: AI cho chẩn đoán Ung thư phổi trên ảnh CT",
+    "section": "Yêu cầu",
+    "text": "Yêu cầu\n\nBắt buộc\n\nSinh viên UET, ưu tiên năm 2–3.\nBiết Python ở mức cơ bản.\nĐọc được tài liệu tiếng Anh.\nCó thể cam kết thời gian như mục bên dưới.\n\n\n\nƯu tiên (chưa có cũng được, nhóm sẽ training)\n\nKiến thức: Machine Learning, Computer Vision, Deep Learning, LLM.\nKỹ năng: PyTorch, Linux, Git, Docker, làm việc với remote server.\n\nKhông yêu cầu kinh nghiệm nghiên cứu trước đó. Tháng đầu có lộ trình onboarding: reading list và tutorial."
+  },
+  {
+    "objectID": "vi/index.html#cam-kết",
+    "href": "vi/index.html#cam-kết",
+    "title": "Tuyển sinh viên nghiên cứu: AI cho chẩn đoán Ung thư phổi trên ảnh CT",
+    "section": "Cam kết",
+    "text": "Cam kết\n\n8–10 giờ/tuần.\nTối thiểu 6 tháng; ưu tiên bạn muốn theo đến NCKH sinh viên hoặc khoá luận.\nHọp nhóm ít nhất 1 lần/tuần, ưu tiên offline, lịch được bố trí trước.\nTuân thủ quy định bảo mật dữ liệu bệnh nhân (có thể ký cam kết bảo mật)."
+  },
+  {
+    "objectID": "vi/index.html#quyền-lợi",
+    "href": "vi/index.html#quyền-lợi",
+    "title": "Tuyển sinh viên nghiên cứu: AI cho chẩn đoán Ung thư phổi trên ảnh CT",
+    "section": "Quyền lợi",
+    "text": "Quyền lợi\n\nĐược supervisor hướng dẫn trực tiếp, review code và review bài viết.\nTruy cập GPU server của nhóm.\nCó đề tài cho NCKH sinh viên hoặc khoá luận; đồng tác giả nếu đóng góp đủ.\nThư giới thiệu khi đi học tiếp hoặc đi làm.\nHiện chưa có hỗ trợ tài chính."
+  },
+  {
+    "objectID": "vi/index.html#cách-ứng-tuyển",
+    "href": "vi/index.html#cách-ứng-tuyển",
+    "title": "Tuyển sinh viên nghiên cứu: AI cho chẩn đoán Ung thư phổi trên ảnh CT",
+    "section": "Cách ứng tuyển",
+    "text": "Cách ứng tuyển\n\nGửi email tới bals@vnu.edu.vn với tiêu đề: [KCUTP] Họ tên - MSSV - Hướng 1/2\nĐính kèm: CV (1 trang), bảng điểm, link GitHub nếu có, và 3–5 câu về lý do bạn quan tâm.\nCác vòng chọn:\n\nLọc hồ sơ.\nMini task (khoảng 1 tuần, ví dụ đọc 1 ca CT và hiển thị mask nốt phổi).\nPhỏng vấn 20–30 phút.\n\n\n Ứng tuyển"
+  },
+  {
+    "objectID": "vi/index.html#faq",
+    "href": "vi/index.html#faq",
+    "title": "Tuyển sinh viên nghiên cứu: AI cho chẩn đoán Ung thư phổi trên ảnh CT",
+    "section": "FAQ",
+    "text": "FAQ\nChưa học Deep Learning có nộp được không?\nĐược. Hãy ghi rõ những gì bạn đã tự học.\nCó được chọn cả hai hướng không?\nĐược ghi cả hai, nhưng khi vào nhóm sẽ làm chính một hướng."
+  }
+]
