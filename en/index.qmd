@@ -1,0 +1,98 @@
+---
+title: "Call for Research Students: AI for Lung Cancer Diagnosis on CT"
+description: "UET-IAI is recruiting 3–5 undergraduate research students to work on Vision-Language Models and a diagnostic support system for lung cancer on CT."
+lang: en
+toc-title: "Contents"
+format:
+  html: default
+  pdf: default
+---
+
+{{< jd-summary >}}
+
+## About the project
+
+Lung cancer is one of the leading causes of cancer death. Detecting lung nodules early on chest CT substantially improves the chances of successful treatment. Our group builds AI systems that support clinicians: systems that pinpoint lesions, classify cancer, and explain their own results.
+
+## Research tracks
+
+:::: {.project-grid}
+
+::: {.project-card track="1"}
+### Vision-Language Model (VLM) for lung cancer
+
+- **Goal:** a model that both sees a CT scan and answers in natural language, while localizing (grounding) the lesion it is talking about.
+- **What you will do:** build a pipeline that generates instruction/conversation data paired with segmentation masks; fine-tune a grounded VLM (GLaMM); evaluate the model.
+- **Outcomes:** a dataset, a model, a technical report, and ultimately a paper.
+:::
+
+::: {.project-card track="2"}
+### Diagnostic support system (Segmentation & Classification)
+
+- **Goal:** a complete pipeline from DICOM images through lung/nodule segmentation to malignancy classification (benign vs. malignant) and cancer classification. The system is deployed and used in practice at our partner hospital.
+- **What you will do:**
+  - Preprocess CT images.
+  - Train and evaluate segmentation models (U-Net, nnU-Net, MedSAM…) and classification models.
+  - Handle deployment and maintain the system running on-site at the partner hospital.
+- **Outcomes:** an end-to-end system running at the hospital, benchmark results, and a technical report.
+:::
+
+::::
+
+## What you will do
+
+- Read and present papers and experimental results at weekly group meetings.
+- Work with public datasets (LIDC-IDRI, LUNA) and labeled clinical data from our partner hospital.
+- Write code, run experiments on the GPU server, and document the results.
+- Write reports and contribute to writing papers.
+
+## Requirements
+
+### Required
+
+- UET student, preferably in year 2–3.
+- Basic Python.
+- Able to read technical material in English.
+- Able to make the time commitment described below.
+
+### Preferred (not required — we will train you)
+
+{{< skills >}}
+
+No prior research experience is required. The first month follows an onboarding plan: a reading list and tutorials.
+
+## Commitment
+
+- 8–10 hours per week.
+- At least 6 months; we prefer students who want to continue into a student research project (NCKH) or a graduation thesis.
+- Group meetings at least once a week, preferably in person, scheduled in advance.
+- Comply with patient data privacy rules (you may be asked to sign a confidentiality agreement).
+
+## What you get
+
+- Direct guidance from the supervisor, including code reviews and feedback on your writing.
+- Access to the group's GPU server.
+- A topic for a student research project or graduation thesis; co-authorship for sufficient contributions.
+- Recommendation letters for graduate school or job applications.
+- No financial support is available at this time.
+
+::::: {.keep-together}
+## How to apply
+
+1. Email {{< jd email link=true >}} with the subject: `{{< jd apply_subject >}}`
+2. Attach: your CV (1 page), transcript, a GitHub link if you have one, and 3–5 sentences on why you are interested.
+3. Selection rounds:
+   1. Application screening.
+   2. Mini task (about 1 week, e.g., load a CT case and display the nodule mask).
+   3. A 20–30 minute interview.
+
+{{< jd-apply >}}
+:::::
+
+## FAQ
+
+**I haven't studied Deep Learning yet. Can I still apply?**\
+Yes. Clearly describe what you have learned on your own.
+
+**Can I choose both tracks?**\
+You may list both, but once you join you will focus mainly on one.

@@ -1,0 +1,98 @@
+---
+title: "Tuyển sinh viên nghiên cứu: AI cho chẩn đoán Ung thư phổi trên ảnh CT"
+description: "UET-IAI tuyển 3–5 sinh viên nghiên cứu: Vision-Language Model và hệ thống hỗ trợ chẩn đoán Ung thư phổi trên ảnh CT."
+lang: vi
+toc-title: "Mục lục"
+format:
+  html: default
+  pdf: default
+---
+
+{{< jd-summary >}}
+
+## Giới thiệu
+
+Ung thư phổi là một trong những bệnh ung thư gây tử vong hàng đầu. Phát hiện sớm nốt phổi trên ảnh CT lồng ngực giúp tăng đáng kể cơ hội điều trị. Nhóm phát triển các hệ thống AI hỗ trợ bác sĩ: hệ thống tìm đúng vị trí tổn thương, phân loại ung thư, và giải thích được kết quả của mình.
+
+## Các hướng dự án
+
+:::: {.project-grid}
+
+::: {.project-card track="1"}
+### Vision-Language Model (VLM) cho ung thư phổi
+
+- **Mục tiêu:** một model vừa nhìn được ảnh CT vừa trả lời bằng ngôn ngữ, đồng thời khoanh vùng (grounding) tổn thương nó đang nói tới.
+- **Việc sinh viên làm:** xây pipeline tạo dữ liệu instruction/conversation kèm segmentation mask; fine-tune grounded VLM (GLaMM); đánh giá model.
+- **Kết quả:** dataset, model, báo cáo kỹ thuật và hướng tới paper.
+:::
+
+::: {.project-card track="2"}
+### Hệ thống hỗ trợ chẩn đoán (Segmentation & Classification)
+
+- **Mục tiêu:** một pipeline đầy đủ từ ảnh DICOM qua lung/nodule segmentation đến malignancy classification (lành tính/ác tính) và cancer classification (phân loại ung thư). Hệ thống được triển khai và vận hành thực tế tại Bệnh viện đối tác.
+- **Việc sinh viên làm:**
+  - Tiền xử lý ảnh CT.
+  - Huấn luyện và đánh giá các model segmentation (U-Net, nnU-Net, MedSAM…) và classification.
+  - Deployment và maintain hệ thống chạy trực tiếp tại Bệnh viện đối tác.
+- **Kết quả:** hệ thống chạy được end-to-end tại bệnh viện, kết quả benchmark, báo cáo kỹ thuật.
+:::
+
+::::
+
+## Bạn sẽ làm gì
+
+- Đọc và trình bày paper, kết quả thí nghiệm trong buổi họp nhóm hằng tuần.
+- Làm việc với dataset công khai (LIDC-IDRI, LUNA) và dữ liệu lâm sàng có nhãn từ Bệnh viện đối tác.
+- Viết code, chạy thí nghiệm trên GPU server, ghi lại kết quả.
+- Viết báo cáo và tham gia viết paper.
+
+## Yêu cầu
+
+### Bắt buộc
+
+- Sinh viên UET, ưu tiên năm 2–3.
+- Biết Python ở mức cơ bản.
+- Đọc được tài liệu tiếng Anh.
+- Có thể cam kết thời gian như mục bên dưới.
+
+### Ưu tiên (chưa có cũng được, nhóm sẽ training)
+
+{{< skills >}}
+
+Không yêu cầu kinh nghiệm nghiên cứu trước đó. Tháng đầu có lộ trình onboarding: reading list và tutorial.
+
+## Cam kết
+
+- 8–10 giờ/tuần.
+- Tối thiểu 6 tháng; ưu tiên bạn muốn theo đến NCKH sinh viên hoặc khoá luận.
+- Họp nhóm ít nhất 1 lần/tuần, ưu tiên offline, lịch được bố trí trước.
+- Tuân thủ quy định bảo mật dữ liệu bệnh nhân (có thể ký cam kết bảo mật).
+
+## Quyền lợi
+
+- Được supervisor hướng dẫn trực tiếp, review code và review bài viết.
+- Truy cập GPU server của nhóm.
+- Có đề tài cho NCKH sinh viên hoặc khoá luận; đồng tác giả nếu đóng góp đủ.
+- Thư giới thiệu khi đi học tiếp hoặc đi làm.
+- Hiện chưa có hỗ trợ tài chính.
+
+::::: {.keep-together}
+## Cách ứng tuyển
+
+1. Gửi email tới {{< jd email link=true >}} với tiêu đề: `{{< jd apply_subject >}}`
+2. Đính kèm: CV (1 trang), bảng điểm, link GitHub nếu có, và 3–5 câu về lý do bạn quan tâm.
+3. Các vòng chọn:
+   1. Lọc hồ sơ.
+   2. Mini task (khoảng 1 tuần, ví dụ đọc 1 ca CT và hiển thị mask nốt phổi).
+   3. Phỏng vấn 20–30 phút.
+
+{{< jd-apply >}}
+:::::
+
+## FAQ
+
+**Chưa học Deep Learning có nộp được không?**\
+Được. Hãy ghi rõ những gì bạn đã tự học.
+
+**Có được chọn cả hai hướng không?**\
+Được ghi cả hai, nhưng khi vào nhóm sẽ làm chính một hướng.
