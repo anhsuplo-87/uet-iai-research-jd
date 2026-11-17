@@ -1,0 +1,46 @@
+# ---------------------------------------------------------------------------
+# Shared metadata for the JD. Used by both languages, the web page and the PDF.
+# Fields with {vi, en} are translated; plain strings are the same in both.
+# Read via the {{< jd <key> >}} shortcode and by _extensions/jd/jd.lua.
+# ---------------------------------------------------------------------------
+
+# Bump this date whenever the content changes (shown as "Last updated").
+updated: 2026-11-17
+
+# Public site URL (no trailing slash). Used for the QR code in the PDF.
+site_url: https://anhsuplo-87.github.io/uet-iai-research-jd
+
+group: UET-IAI
+
+institution:
+  vi: Trường Đại học Công nghệ, ĐHQGHN
+  en: VNU University of Engineering and Technology
+
+pi:
+  vi: TS. Trần Quốc Long
+  en: Dr. Trần Quốc Long
+
+supervisor:
+  vi: ThS. Lương Sơn Bá
+  en: M.Sc. Lương Sơn Bá
+
+email: bals@vnu.edu.vn
+
+# Recruitment status: set open: false to show "Closed".
+recruiting:
+  open: true
+  positions: "3–5"
+
+deadline:
+  vi: Xét hồ sơ liên tục đến khi đủ
+  en: Rolling — applications are reviewed until all positions are filled
+
+# Email subject template (also pre-filled in the mailto: link).
+apply_subject:
+  vi: "[KCUTP] Họ tên - MSSV - Hướng 1/2"
+  en: "[KCUTP] Full name - Student ID - Track 1/2"
+
+# Short title used in the PDF running header.
+short_title:
+  vi: "Tuyển sinh viên nghiên cứu · AI chẩn đoán Ung thư phổi trên CT"
+  en: "Call for research students · AI for lung cancer diagnosis on CT"

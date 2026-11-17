@@ -1,0 +1,14 @@
+---
+title: "UET-IAI · Research"
+lang: vi
+format:
+  html:
+    toc: false
+    include-in-header:
+      text: |
+        <meta http-equiv="refresh" content="0; url=vi/">
+        <link rel="canonical" href="vi/">
+        <script>window.location.replace("vi/" + window.location.hash);</script>
+---
+
+Đang chuyển tới [bản tiếng Việt](vi/index.qmd) · [English version](en/index.qmd)

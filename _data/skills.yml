@@ -1,0 +1,28 @@
+# ---------------------------------------------------------------------------
+# Knowledge & skills ("Preferred" section). Rendered by {{< skills >}} on the
+# web page and in the PDF, in both languages.
+#
+# - Each group has a bilingual label and a list of items.
+# - An item is either a plain string (same in both languages — use this for
+#   Glossary terms such as PyTorch, Docker) or a map {vi: ..., en: ...}.
+# - To add a skill: append one line under the right group. To add a group:
+#   copy a whole block. Nothing else needs to change.
+# ---------------------------------------------------------------------------
+
+groups:
+  - id: knowledge
+    label: { vi: "Kiến thức", en: "Knowledge" }
+    items:
+      - Machine Learning
+      - Computer Vision
+      - Deep Learning
+      - LLM
+
+  - id: skills
+    label: { vi: "Kỹ năng", en: "Skills" }
+    items:
+      - PyTorch
+      - Linux
+      - Git
+      - Docker
+      - { vi: "làm việc với remote server", en: "working with remote servers" }

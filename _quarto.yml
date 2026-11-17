@@ -1,0 +1,67 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - index.qmd
+    - vi/index.qmd
+    - en/index.qmd
+  resources:
+    - assets/*_600.png
+
+website:
+  title: "UET-IAI · Research"
+  favicon: assets/iai_logo_600.png
+  page-navigation: false
+  navbar:
+    title: "UET-IAI"
+    collapse: false   # keep the VI | EN switch visible on phones
+    search: false
+    logo: assets/iai_logo_600.png
+    logo-alt: "UET-IAI"
+    right:
+      # Language switch: the item for the current page is highlighted automatically.
+      - text: "VI"
+        href: vi/index.qmd
+        aria-label: "Tiếng Việt"
+      - text: "EN"
+        href: en/index.qmd
+        aria-label: "English"
+  page-footer:
+    center: "UET-IAI · VNU-UET"
+
+# Shortcodes ({{< skills >}}, {{< jd ... >}}) and the filter that feeds
+# _data/*.yml + brand colors into the LaTeX template live in _extensions/jd.
+filters:
+  - jd
+
+format:
+  html:
+    theme:
+      light: [cosmo, styles.scss]
+    toc: true
+    toc-depth: 2
+    smooth-scroll: true
+    format-links: false
+    anchor-sections: false
+    include-after-body: partials/apply-fab.html
+  pdf:
+    pdf-engine: xelatex
+    documentclass: scrartcl
+    papersize: a4
+    fontsize: 10pt
+    linestretch: 1.1
+    geometry:
+      - top=2.6cm
+      - bottom=3.2cm
+      - left=2cm
+      - right=2cm
+      - headsep=0.6cm
+      - footskip=1.4cm
+    colorlinks: true
+    toc: false
+    number-sections: false
+    shift-heading-level-by: -1   # "##" -> \section in the PDF
+    include-in-header: partials/header.tex
+    template-partials:
+      - partials/title.tex
+      - partials/before-body.tex

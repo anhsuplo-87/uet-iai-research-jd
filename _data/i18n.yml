@@ -1,0 +1,17 @@
+# UI strings (buttons, labels) in both languages.
+apply:          { vi: "Ứng tuyển",            en: "Apply" }
+download_pdf:   { vi: "Tải PDF",              en: "Download PDF" }
+updated:        { vi: "Cập nhật lần cuối",    en: "Last updated" }
+group:          { vi: "Nhóm",                 en: "Group" }
+pi:             { vi: "PI",                   en: "PI" }
+supervisor:     { vi: "Supervisor",           en: "Supervisor" }
+status:         { vi: "Trạng thái",           en: "Status" }
+deadline:       { vi: "Hạn nộp",              en: "Deadline" }
+status_open:    { vi: "Đang mở",              en: "Open" }
+status_closed:  { vi: "Đã đóng",              en: "Closed" }
+positions:      { vi: "vị trí",               en: "positions" }
+track:          { vi: "Hướng",                en: "Track" }
+web_version:    { vi: "Xem bản web",          en: "Web version" }
+page:           { vi: "Trang",                en: "Page" }
+of:             { vi: "/",                    en: "of" }
+apply_via:      { vi: "Ứng tuyển qua email",  en: "Apply by email" }

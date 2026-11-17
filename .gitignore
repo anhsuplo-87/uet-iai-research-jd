@@ -1,0 +1,13 @@
+/.quarto/
+/_site/
+*_files/
+*.tex
+!partials/*.tex
+*.log
+*.aux
+*.pdf
+.Rproj.user
+.DS_Store
+
+**/*.quarto_ipynb
+/.claude/
