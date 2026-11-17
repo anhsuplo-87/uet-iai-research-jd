@@ -1,0 +1,24 @@
+% ---------------------------------------------------------------------------
+% Page-1 header band: logos + title (replaces Quarto's before-body.tex).
+% ---------------------------------------------------------------------------
+\thispagestyle{jdfirst}
+\vspace*{-1.2cm}
+\noindent
+\begin{minipage}[c]{0.62\textwidth}
+  \raggedright
+  \includegraphics[height=1.55cm]{../assets/iai_logo_600.png}\hspace{3mm}%
+  \includegraphics[height=1.55cm]{../assets/uet_logo_600.png}\hspace{3mm}%
+  \includegraphics[height=1.55cm]{../assets/vnu_logo_600.png}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.36\textwidth}
+  \raggedleft\small\sffamily\color{jdprimary}
+  {\bfseries $jd.group$}\\
+  {\color{black!60}$jd.institution$}
+\end{minipage}
+
+\vspace{3mm}
+\noindent{\color{jdprimary}\rule{\linewidth}{2.2pt}}\par\vspace{1.5mm}
+\noindent{\sffamily\bfseries\fontsize{19}{24}\selectfont\color{jdprimary}\raggedright $title$\par}
+\vspace{1.5mm}
+\noindent{\color{jdsecondary}\rule{0.22\linewidth}{2.2pt}}\par
+\vspace{2mm}

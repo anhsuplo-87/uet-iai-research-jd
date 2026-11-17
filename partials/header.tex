@@ -1,0 +1,95 @@
+% ---------------------------------------------------------------------------
+% PDF preamble (static part). Colors, URLs and labels that depend on the data
+% files are set in partials/title.tex (a templated partial, sees $jd.*$).
+% ---------------------------------------------------------------------------
+
+% --- Fonts: bundled Be Vietnam Pro (OFL), full Vietnamese coverage ---------
+% Paths are relative to the .qmd being rendered (vi/ or en/).
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX}
+\setmainfont{BeVietnamPro}[
+  Path = ../fonts/BeVietnamPro/, Extension = .ttf,
+  UprightFont = *-Regular, ItalicFont = *-Italic,
+  BoldFont = *-SemiBold, BoldItalicFont = *-SemiBoldItalic]
+\setsansfont{BeVietnamPro}[
+  Path = ../fonts/BeVietnamPro/, Extension = .ttf,
+  UprightFont = *-Regular, ItalicFont = *-Italic,
+  BoldFont = *-Bold, BoldItalicFont = *-BoldItalic]
+% Inline code (e.g. the email subject) also needs Vietnamese glyphs.
+\setmonofont{BeVietnamPro}[
+  Path = ../fonts/BeVietnamPro/, Extension = .ttf,
+  UprightFont = *-SemiBold, ItalicFont = *-SemiBoldItalic,
+  BoldFont = *-Bold, BoldItalicFont = *-BoldItalic, Scale = 0.95]
+
+% --- Packages ----------------------------------------------------------------
+\usepackage{graphicx}
+\usepackage[most]{tcolorbox}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{qrcode}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\setlist{itemsep=1pt, topsep=3pt, parsep=0pt}
+\setlist[itemize,1]{label={\color{jdsecondary}\textbullet}, leftmargin=1.2em}
+\setlist[itemize,2]{label={\color{jdprimary}\textendash}, leftmargin=1.2em}
+\setlength{\parskip}{0.4em}
+\setlength{\parindent}{0pt}
+\frenchspacing
+
+% --- Headings (KOMA-Script) ------------------------------------------------
+\setkomafont{disposition}{\sffamily\bfseries\color{jdprimary}}
+\setkomafont{section}{\Large}
+\setkomafont{subsection}{\normalsize}
+\RedeclareSectionCommand[beforeskip=0.8em, afterskip=0.3em]{section}
+\RedeclareSectionCommand[beforeskip=0.6em, afterskip=0.2em]{subsection}
+\makeatletter
+\renewcommand{\sectionlinesformat}[4]{%
+  \Ifstr{#1}{section}{%
+    \parbox[t]{\linewidth}{\raggedsection\@hangfrom{\hskip #2#3}{#4}\par
+      \vspace{-0.5ex}{\color{jdsecondary}\rule{\linewidth}{1pt}}}%
+  }{\@hangfrom{\hskip #2#3}{#4}}%
+}
+\makeatother
+
+% --- Inline code: tinted, no monospace look -----------------------------------
+\let\jdorigtexttt\texttt
+\renewcommand{\texttt}[1]{%
+  \tcbox[on line, colback=jdprimary!7, colframe=jdprimary!7, boxrule=0pt,
+    arc=1mm, left=1mm, right=1mm, top=0.2mm, bottom=0.2mm, boxsep=0pt]{%
+    \jdorigtexttt{\color{jdprimary}#1}}}
+
+% --- Building blocks used by the jd shortcodes / filter ---------------------
+% Status badge: \jdbadge{Đang mở · 3–5 vị trí}
+\newcommand{\jdbadge}[1]{%
+  \tcbox[on line, colback=jdsecondary!18, colframe=jdsecondary, boxrule=0.6pt,
+    arc=2.5mm, left=2mm, right=2mm, top=0.4mm, bottom=0.4mm, boxsep=0pt]{%
+    \sffamily\small\bfseries{\color{jdsecondary}\textbullet}~\color{jdprimary}#1}}
+
+% Apply link: \jdapply{mailto:...}{label}
+\newcommand{\jdapply}[2]{%
+  \href{#1}{\tcbox[on line, colback=jdprimary, colframe=jdprimary, arc=1.5mm,
+    left=2.5mm, right=2.5mm, top=1mm, bottom=1mm, boxsep=0pt]{%
+    \sffamily\small\bfseries\color{white}#2\enspace$\rightarrow$}}}
+
+% Info box at the top of page 1.
+\newenvironment{jdinfo}{%
+  \par\noindent
+  \tcolorbox[enhanced, colback=jdprimary!4, colframe=jdprimary!4, boxrule=0pt,
+    borderline west={2.5pt}{0pt}{jdsecondary}, arc=1mm,
+    left=3mm, right=3mm, top=1.5mm, bottom=1.5mm, before skip=2mm, after skip=2mm]
+  \small\renewcommand{\arraystretch}{1.25}%
+  \begin{tabular}{@{}>{\leavevmode\color{jdprimary}}p{2.6cm}p{\dimexpr\linewidth-2.6cm-2\tabcolsep\relax}@{}}%
+}{%
+  \end{tabular}\endtcolorbox
+}
+
+% Project track block: \begin{jdproject}{Hướng 1}{Title} ... \end{jdproject}
+\newtcolorbox{jdproject}[2]{%
+  enhanced, % not breakable: a track block always stays on one page
+  colback=white, colframe=jdprimary, boxrule=0.6pt, arc=1.5mm,
+  colbacktitle=jdprimary, coltitle=white,
+  fonttitle=\sffamily\bfseries,
+  title={{\color{jdsecondary!35!white}\MakeUppercase{#1}}\enspace\textbar\enspace #2},
+  left=3mm, right=3mm, top=1.5mm, bottom=1.5mm,
+  before skip=2.5mm, after skip=2.5mm}
