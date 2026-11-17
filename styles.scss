@@ -1,0 +1,248 @@
+/*-- scss:defaults --*/
+
+// ---------------------------------------------------------------------------
+// Brand colors, taken from the UET-IAI logo (assets/iai_logo.png).
+// SINGLE SOURCE: the PDF reads these two lines too (_extensions/jd/common.lua),
+// so keep the format `$jd-xxx: #RRGGBB;`.
+// ---------------------------------------------------------------------------
+$jd-primary: #003470;   // IAI navy
+$jd-secondary: #97B54F; // IAI green
+
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap");
+
+$font-family-sans-serif: "Be Vietnam Pro", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+$headings-font-weight: 700;
+$font-size-root: 17px;
+$line-height-base: 1.65;
+
+$primary: $jd-primary;
+$secondary: $jd-secondary;
+$success: $jd-secondary;
+$link-color: $jd-primary;
+$body-color: #1d2733;
+$headings-color: $jd-primary;
+
+$navbar-bg: #ffffff;
+$navbar-fg: $jd-primary;
+$navbar-hl: $jd-primary;
+$footer-bg: #f4f6f9;
+
+$code-color: $jd-primary;
+$code-bg: rgba($jd-primary, 0.07);
+
+/*-- scss:rules --*/
+
+// ---- Layout ----------------------------------------------------------------
+.navbar {
+  border-bottom: 3px solid $jd-secondary;
+  .navbar-brand-logo { max-height: 38px; }
+  .navbar-title { font-weight: 700; }
+  // Language switch: compact pills, active one filled.
+  .navbar-nav .nav-link {
+    font-weight: 600;
+    border-radius: 999px;
+    padding: 0.2rem 0.75rem !important;
+    margin-left: 0.25rem;
+  }
+  .navbar-nav .nav-link.active {
+    background: $jd-primary;
+    color: #fff !important;
+  }
+}
+
+#title-block-header .title {
+  font-size: clamp(1.6rem, 4.5vw, 2.35rem);
+  line-height: 1.25;
+  &::after {
+    content: "";
+    display: block;
+    width: 72px;
+    height: 4px;
+    margin-top: 0.75rem;
+    background: $jd-secondary;
+    border-radius: 2px;
+  }
+}
+
+main h2 {
+  margin-top: 2.2rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 2px solid rgba($jd-secondary, 0.55);
+}
+
+main h3 { font-size: 1.15rem; }
+
+// ---- Summary box -------------------------------------------------------------
+.jd-summary {
+  background: rgba($jd-primary, 0.04);
+  border-left: 4px solid $jd-secondary;
+  border-radius: 10px;
+  padding: 1.1rem 1.25rem 0.9rem;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.jd-meta {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.4rem 1.5rem;
+  margin: 0 0 1rem;
+  @media (min-width: 640px) { grid-template-columns: 1fr 1fr; }
+  > div { min-width: 0; }
+  dt {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: rgba($jd-primary, 0.7);
+    margin: 0;
+  }
+  dd { margin: 0; font-weight: 500; overflow-wrap: anywhere; }
+}
+
+.jd-updated {
+  font-size: 0.85rem;
+  color: #5b6573;
+  margin: 0.75rem 0 0;
+}
+
+// ---- Status badge --------------------------------------------------------------
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.15rem 0.75rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  &.is-open { background: rgba($jd-secondary, 0.2); color: darken($jd-secondary, 28%); }
+  &.is-closed { background: #eceef1; color: #5b6573; }
+  .status-dot {
+    width: 0.55rem;
+    height: 0.55rem;
+    border-radius: 50%;
+    background: currentColor;
+  }
+  &.is-open .status-dot {
+    background: $jd-secondary;
+    box-shadow: 0 0 0 0 rgba($jd-secondary, 0.6);
+    animation: jd-pulse 2s infinite;
+  }
+}
+
+@keyframes jd-pulse {
+  70% { box-shadow: 0 0 0 7px rgba($jd-secondary, 0); }
+  100% { box-shadow: 0 0 0 0 rgba($jd-secondary, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .status-badge.is-open .status-dot { animation: none; }
+}
+
+// ---- Buttons --------------------------------------------------------------------
+.jd-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1rem 0;
+  .jd-summary & { margin: 0; }
+}
+
+.btn-apply {
+  background: $jd-primary;
+  border: 2px solid $jd-primary;
+  color: #fff !important;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 0.55rem 1.4rem;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba($jd-primary, 0.25);
+  &:hover, &:focus { background: lighten($jd-primary, 8%); border-color: lighten($jd-primary, 8%); }
+}
+
+.btn-pdf {
+  background: #fff;
+  border: 2px solid $jd-primary;
+  color: $jd-primary !important;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 0.55rem 1.2rem;
+  text-decoration: none;
+  &:hover, &:focus { background: rgba($jd-primary, 0.06); }
+}
+
+@media (max-width: 575.98px) {
+  .jd-actions .btn { flex: 1 1 100%; }
+}
+
+// Floating Apply button on phones.
+.apply-fab {
+  display: none;
+  @media (max-width: 767.98px) {
+    display: block;
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 1030;
+    opacity: 0;
+    transform: translateY(1rem);
+    pointer-events: none;
+    transition: opacity 0.2s, transform 0.2s;
+    &.is-visible { opacity: 1; transform: none; pointer-events: auto; }
+    .btn-apply { box-shadow: 0 6px 20px rgba($jd-primary, 0.4); }
+  }
+}
+
+// Phones: keep brand + VI|EN on one row.
+@media (max-width: 575.98px) {
+  .navbar .navbar-title { font-size: 1rem; }
+  .navbar .navbar-brand-logo { max-height: 30px; }
+  .navbar .navbar-nav .nav-link { padding: 0.15rem 0.6rem !important; }
+}
+
+@media (max-width: 767.98px) {
+  // Leave room so the floating button never covers the footer text.
+  .nav-footer { padding-bottom: 4.5rem; }
+}
+
+// ---- Project cards ---------------------------------------------------------------
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 1rem 0;
+  @media (min-width: 992px) { grid-template-columns: 1fr 1fr; }
+}
+
+.project-card {
+  background: #fff;
+  border: 1px solid rgba($jd-primary, 0.15);
+  border-top: 5px solid $jd-primary;
+  border-radius: 12px;
+  padding: 1rem 1.15rem 0.5rem;
+  box-shadow: 0 2px 10px rgba($jd-primary, 0.07);
+  .track-label {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: darken($jd-secondary, 25%);
+    background: rgba($jd-secondary, 0.2);
+    border-radius: 999px;
+    padding: 0.1rem 0.6rem;
+    margin-bottom: 0.4rem;
+    p { margin: 0; }
+  }
+  h3.card-title {
+    margin-top: 0.2rem;
+    font-size: 1.15rem;
+    border: 0;
+  }
+  ul { padding-left: 1.1rem; }
+  li { margin-bottom: 0.3rem; }
+}
+
+// Bullets in brand green.
+main ul > li::marker { color: $jd-secondary; }
+
+code { white-space: normal; overflow-wrap: anywhere; }

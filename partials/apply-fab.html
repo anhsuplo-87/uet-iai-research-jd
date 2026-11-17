@@ -1,0 +1,15 @@
+<script>
+  // Show the floating "Apply" button (phones only, see styles.scss) once the
+  // Apply button in the summary box has scrolled out of view.
+  (function () {
+    var fab = document.querySelector(".apply-fab");
+    var main = document.querySelector(".jd-summary .btn-apply");
+    if (!fab || !main || !("IntersectionObserver" in window)) {
+      if (fab) fab.classList.add("is-visible");
+      return;
+    }
+    new IntersectionObserver(function (entries) {
+      fab.classList.toggle("is-visible", !entries[0].isIntersecting);
+    }).observe(main);
+  })();
+</script>
